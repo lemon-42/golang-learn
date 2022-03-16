@@ -106,3 +106,53 @@ fmt.Println("a + b = ", a%b)
 %=
 
 */
+
+var a int = 4
+var b int = 2
+
+a += b
+fmt.Println("a += b  = ", a)
+
+a -= b
+fmt.Println("a -= b  = ", a)
+
+a *= b
+fmt.Println("a *= b  = ", a)
+
+a /= b
+fmt.Println("a /= b  = ", a)
+
+a %= 3
+fmt.Println("a %= b  = ", a)
+
+// Opérateurs d'incrémentation
+
+++ // Incrémente d'une unité la variable
+-- // Décrémente d'une unité la variable
+
+// Addition de type
+
+var x int = 50
+var y int = 30
+
+fmt.Printf("x + y = ", x+y) // Addition de deux variables de type int
+
+// Résultat : x + y = %!(EXTRA int = 80)
+
+// Addition d'un type int et un type float32
+
+var x int = 50
+var y float32 = 30.5
+
+fmt.Printf("x + y = ", x+y)
+
+Erreur :
+
+invalid operation: x + y (mismatched types int and float32)
+
+var x int = 50
+var y float32 = 30.5
+
+fmt.Printf("x + y = ", float32(x )+ y) // convertir le type de la variable x de int en float32
+
+// Résultat : x + y = %!(EXTRA float32=80.5)
