@@ -1,4 +1,4 @@
-package main // OBLIGATOIRE dans tout programme en go.
+package main 
 
 import "fmt" // Importation de la bibliothèque fmt
 
