@@ -1,3 +1,5 @@
+// Fichier de base en Go pour dire bonjour
+
 package main 
 
 import "fmt" // Importation de la bibliothèque fmt
@@ -10,7 +12,7 @@ func main() { // Fontion principale
 
 
 
-/* Définir une variable :
+/* Définir une variable (syntaxe) :
 
 var [nom_de_la_variable] [type]
 
