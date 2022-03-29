@@ -18,14 +18,6 @@ var [nom_de_la_variable] [type]
 
 */
 
-var vie int
-
-var vie int = 12
-
-var vie, argent, puissance int
-
-var vie, argent, puissance int = 10, 20, 30 // Surcharge des variables
-
 var nom_de_la_variable int 
 var nom_de_la_variable int = 12 // Surcharge de la variable
 var var1, var2, var3 = 1, 2, 3 // Surchargement des variables
