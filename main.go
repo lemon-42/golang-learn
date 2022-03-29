@@ -1,12 +1,12 @@
-// Fichier de base en Go pour dire bonjour
+// Golang glossaire made by lemon_42 for Zone01
 
-package main 
+package main // Ou piscine dans notre cas
 
-import "fmt" // Importation de la bibliothèque fmt
+import "github.com/01-edu/z01" // Importation de la bibliothèque pour la piscine
 
 func main() { // Fontion principale
 
-	fmt.Println("Hello World !") // Affiche Hello World !
+	z01.PrintRune("Hello World !") // Affiche Hello World !
 
 }
 
@@ -24,25 +24,22 @@ var vie int = 12
 
 var vie, argent, puissance int
 
-fmt.Println("vie : ", vie)
-fmt.Println("argent : ", argent)
-fmt.Println("puissance : ", puissance)
-
 var vie, argent, puissance int = 10, 20, 30 // Surcharge des variables
 
-// Il est possible de déclarer plusieurs variables avec des types différents
-
-var vie int = 20
-var nom string = "Juju"
-var vitesse float32 = 5.4
+var nom_de_la_variable int 
+var nom_de_la_variable int = 12 // Surcharge de la variable
+var var1, var2, var3 = 1, 2, 3 // Surchargement des variables
+ma_variable := 42 // Ecriture raccourcis pour tout types
+float := 12.3
+string := "Citron"
 
 // Il est également possible d'utiliser une autre syntaxe pour un affichage plus clair
 
 func main() {
 	var (
-		vie	int = 20
-		nom string = "Default"
-		vitesse float32 = 5.4
+		xp int = 0
+		nom string = "Citron"
+		vitesse float32 = 4.2
 	)
 }
 
@@ -52,23 +49,10 @@ func main() {
 
 Pour déclarer une variable dynamique on supprime le mot clé var et on le remplace par := */
 
-flt := 15.5 // sera automatiquement de type float
+float := 15.5 // sera automatiquement de type float
 in := 5 //  sera automatiquement de type int
-st := "hello" //  sera automatiquement de type string
-bol := true //  sera automatiquement de type boolean
-
-fmt.Printf("Le type de la varialbe flt est %T\n", flt)
-fmt.Printf("Le type de la varialbe in est %T\n", in)
-fmt.Printf("Le type de la varialbe st est %T\n", st)
-fmt.Printf("Le type de la varialbe bol est %T\n", bol)
-
-/*
-    %T : affiche le type d'une valeur
-    %d : affiche un entier
-    %s : affiche une chaîne de caractères
-    %f : affiche un nombre décimal
-    %b : affiche une représentation binaire
-*/
+str := "Citron" //  sera automatiquement de type string
+bol := true, false //  sera automatiquement de type boolean
 
 // Les constantes : possède une valeur fixe qui ne peut être modifié.
 
@@ -84,7 +68,7 @@ Addition = +
 Soustraction = -
 Multiplication = *
 Division = /
-Modulo = %
+Modulo = % (reste de la division, exemple le modulo de 10 par 3 est 1)
 
 */
 
@@ -132,29 +116,109 @@ fmt.Println("a %= b  = ", a)
 ++ // Incrémente d'une unité la variable
 -- // Décrémente d'une unité la variable
 
-// Addition de type
+// Opérateur relationel
 
-var x int = 50
-var y int = 30
+== : Est strictement égal à
+!= : Est différent de
+> : Plus grand que
+< : Plus petit que
+>= : Plus grand ou égal
+<= : Plus petit ou égal
 
-fmt.Printf("x + y = ", x+y) // Addition de deux variables de type int
+// Opérateur logique
 
-// Résultat : x + y = %!(EXTRA int = 80)
+&& : Et
+|| : Ou
+! : Pas
 
-// Addition d'un type int et un type float32
+// Boucle for : 
 
-var x int = 50
-var y float32 = 30.5
+for i := 1; i < 3; i++ {
+	z01.PrintRune("Citron")
+}
 
-fmt.Printf("x + y = ", x+y)
+// Pour i est égal à 1, tant que i est inférieur à 3, on incrémente i de 1
 
-Erreur :
+//Résultat :
 
-invalid operation: x + y (mismatched types int and float32)
+Citron
+Citron
+Citron
 
-var x int = 50
-var y float32 = 30.5
+// Déclinaison boucle for
 
-fmt.Printf("x + y = ", float32(x )+ y) // convertir le type de la variable x de int en float32
+for xp < 1000000 {
+	z01.PrintRune("Ne lâche rien")
+}
 
-// Résultat : x + y = %!(EXTRA float32=80.5)
+
+// Conditions If Else :
+
+age := 20
+
+if age < 18 {
+	z01.PrintRune("Vous êtes mineur")
+} else {
+	z01.PrintRune("Vous êtes majeur")
+}
+
+// Résultat : 
+
+Vous êtes majeur 
+
+// Variante de If Else
+
+age := 20
+
+if age > 10 && age < 18 {
+	z01.PrintRune("Tu es jeune")
+} else if age > 18 && age < 30 {
+	z01.PrintRune("Tu commence à te faire vieux")
+}
+
+// Résultat : 
+
+Tu commence à te faire vieux
+
+// Break && Continue 
+
+/*
+Break : Interompt la boucle
+Continue : Reviens au début de la boucle
+*/
+
+// Fonctions 
+
+// Délarer une fonction 
+
+func maFonction (liste_de_paramêtre) type_de_retour {
+	/* Votre code */
+}
+
+// Exemple : 
+
+func Addition(a int, b int) int {
+	
+	resultat := a + b
+	return resultat
+}
+
+// Fonction avec paramètre et sans valeurs de retour
+
+func affichage(nom string, age int) {
+    fmt.Println("Bonjour", nom, "vous avez", age, "ans")
+}
+
+func main() {
+    affichage("Einstein", 76)
+    affichage("Golang", 10)
+}
+
+// Fonction avec valeur de retour : 
+
+func Addition(a int, b int) int {
+	
+	resultat := a + b
+	return resultat
+}
+
